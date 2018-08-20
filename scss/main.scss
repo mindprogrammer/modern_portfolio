@@ -93,6 +93,11 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+
+    p {
+      font-weight: 200;
+      font-style: italic;
+    }
   }
 
   .job1 {

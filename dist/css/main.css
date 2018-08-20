@@ -89,6 +89,9 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 * {
   box-sizing: border-box; }
 
@@ -169,6 +172,9 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+    .about-info .bio p {
+      font-weight: 200;
+      font-style: italic; }
   .about-info .job1 {
     grid-area: job1; }
   .about-info .job2 {
