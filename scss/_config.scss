@@ -1,7 +1,7 @@
 $primary-color: rgb(29, 15, 25);
 $secondary-color: #41af3d;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/background.jpeg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -17,7 +17,7 @@ $background-opacity: 0.9;
 
       // Overlay
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         top: 0;
