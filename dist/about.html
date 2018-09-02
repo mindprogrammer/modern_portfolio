@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
     <link rel="stylesheet" href="css/main.css">
     <title>About Me</title>
 </head>
 
-<body>
+<body id="bg-img">
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -53,61 +57,167 @@
         </nav>
     </header>
 
-    <main id="about">
-        <h1 class="lg-heading">
-            About
-            <span class="text-secondary">Me</span>
-        </h1>
-        <h2 class="sm-heading">
-
-        </h2>
-        <div class="about-info">
-            <img src="img/portrait.jpg" alt="Khoi Nguyen" class="bio-image">
-
-            <div class="bio">
-                <h3 class="text-secondary">Hi there!</h3>
-                <p>My name is Khoi Nguyen, a passionate Vietnam & Canada based web application developer. I first discovered
-                    my interest in programming when I was in my mid-20s and I have worked towards improving my own skills,
-                    getting into industry and furthering my experience ever since. I specialize in developing website and
-                    mobile application.
-                </p>
-            </div>
-
-            <div class="job job-1">
-                <h3>Web Application Development</h3>
-                <h5>Full Stack Developer</h5>
-                <p>Utilizing Node.js, Express, MongoDB and JavaScript Frameworks like React, Angular and Vue.js to create
-                    full-stack web applications and deploying final products onto cloud hosting services like Heroku, GitHub
-                    Page by using Git version control. Databases are stored on mLab and Google's Firebase. Projects: CreativeTube
-                    and Shopping List</p>
-            </div>
-
-            <div class="job job-2">
-                <h3>UX/UI Design</h3>
-                <h5>Front End Developer</h5>
-                <p>Using Bootstrap 4 and Materialize UI along with SASS to design elegant user interfaces. Projects: kTunes
-                    (Music Service like iTunes), CreativeTube Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-                    ab sunt fugiat amet sit consectetur reprehenderit ex a reiciendis autem at ipsam earum illo quod iste,
-                    eaque molestiae qui harum?
-                </p>
-            </div>
-
-            <div class="job job-3">
-                <h3>Mobile Application</h3>
-                <h5>Mobile Developer</h5>
-                <p>Building cross-platform mobile app for both Android and iOS devices via using React-Native which is a
-                    powerful framework. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reprehenderit in
-                    ab reiciendis eum nam ea odio alias magnam dolorem, aspernatur quibusdam pariatur, omnis, ex beatae eius
-                    enim! Ab, assumenda.
-                </p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-3">
+        <div class="container col-about">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1 class="display-4">What I Do</h1>
+                    <p class="lead mt-5">My name is Khoi Nguyen, a passionate Vietnam & Canada based web application developer.
+                        I first discovered my interest in programming when I was in my mid-20s and I have worked towards
+                        improving my own skills, getting into industry and furthering my experience ever since. I specialize
+                        in developing website and mobile application.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/portrait.jpg" alt="" class="img-fluid d-none d-md-block about-img">
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- ICON BOXES -->
+    <section id="icon-boxes" class="p-5">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-danger text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h3 class="my-3">React Development</h3>
+                            <p>I have a certain love for React as my main JavaScript frameworks to build powerful and organized
+                                front-end application.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-dark text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-node-js fa-3x"></i>
+                            <h3 class="my-3">NodeJS Development</h3>
+                            <p>Node is the main server-side language that I often use to build from simple to scalable application.
+                                Integrating with Express and MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-laravel fa-3x"></i>
+                            <h3 class="my-3">LAMP Stack</h3>
+                            <p>I also pay attention to the legacy stack of Web Development which is Laravel, Apache, MySQL
+                                and of course PHP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-dark text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-git fa-3x"></i>
+                            <h3 class="my-3">Version Control</h3>
+                            <p>I ultilize Git as my main version control to work with GitHub repositories, GitHub Pages and
+                                Heroku.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-danger text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-css3 fa-3x"></i>
+                            <h3 class="my-3">CSS Frameworks</h3>
+                            <p>I focus to utilize Bootstrap as the main CSS frameworks to design the UI of the website. On
+                                top of that, I used Materialze UI, which I'm still learning it, for few projects of mine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white text-center">
+                        <div class="card-body">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h3 class="my-3">Mobile Development</h3>
+                            <p>In addition to Web Application Development, I also passionate about developing mobile app
+                                for both Android and iOS devices. If you ask which language I use, I would say React Native,
+                                which is to me a very powerful language to build cross-plaform mobile apps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="work.html" class="btn btn-outline-danger btn-lg">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="p-4 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center">Testimonials</h2>
+            <div class="row text-center">
+                <div class="col">
+                    <div class="slider">
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nemo!
+                                </p>
+                                <footer class="blockquote-footer">John Doe From
+                                    <cite title="Company 1">Company 1</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nemo!
+                                </p>
+                                <footer class="blockquote-footer">Sam Smith From
+                                    <cite title="Company 2">Company 2</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nemo!
+                                </p>
+                                <footer class="blockquote-footer">Tyler Durden From
+                                    <cite title="Company 3">Company 3</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer id="main-footer">
-        Copyright &copy; 2018: Khoi Nguyen
+        &copy; 2018. All rights reserved.
     </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
     <script src="./js/main.js"></script>
+    <script>
+        $('.slider').slick({
+            infinite: true,
+            slideToShow: 1,
+            slideToScroll: 1
+        })
+    </script>
 </body>
 
 </html>

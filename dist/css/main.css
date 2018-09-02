@@ -54,9 +54,9 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg);
+      background: url(/dist/img/portrait_menu.jpg);
       border-radius: 50%;
-      border: solid 3px red; }
+      border: solid 2px red; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -100,15 +100,16 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(http://source.unsplash.com/random?technology);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: '';
-      position: absolute;
+      position: fixed;
       z-index: -1;
       top: 0;
       right: 0;
@@ -130,15 +131,15 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(36, 18, 31, 0.5); }
+    background: transparent; }
 
 a {
   color: #fff;
   text-decoration: none; }
 
 header {
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
   width: 100%; }
 
 .text-secondary {
@@ -150,41 +151,18 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 1rem; }
       main .icons a:hover {
         color: red;
+        text-decoration: none;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: red solid 3px; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-    .about-info .bio p {
-      font-weight: 200;
-      font-style: italic; }
-  .about-info .job1 {
-    grid-area: job1; }
-  .about-info .job2 {
-    grid-area: job2; }
-  .about-info .job3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: #2e1827;
-    padding: 0.5rem;
-    border-bottom: red solid 5px; }
+.col-about {
+  margin-top: 200px; }
 
 .projects {
   display: grid;
@@ -197,6 +175,8 @@ main {
       opacity: 0.5;
       border-color: red;
       transition: all 0.5s ease-out; }
+  .projects a:hover {
+    text-decoration: none; }
 
 .boxes {
   display: flex;
@@ -275,7 +255,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

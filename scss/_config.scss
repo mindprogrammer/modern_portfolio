@@ -1,7 +1,7 @@
 $primary-color: rgb(29, 15, 25);
 $secondary-color: red;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(http://source.unsplash.com/random?technology);
 $background-opacity: 0.8;
 
 @mixin easeOut {
@@ -14,11 +14,12 @@ $background-opacity: 0.8;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      background-repeat: no-repeat;
 
       // Overlay
       &:after {
         content: '';
-        position: absolute;
+        position: fixed;
         z-index: -1;
         top: 0;
         right: 0;

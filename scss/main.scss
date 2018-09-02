@@ -11,7 +11,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 1.5;
 }
 
@@ -29,7 +29,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: transparent;
   }
 }
 
@@ -39,8 +39,8 @@ a {
 }
 
 header {
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
   width: 100%;
 }
 
@@ -57,10 +57,11 @@ main {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 1rem;
 
       &:hover {
         color: $secondary-color;
+        text-decoration: none;
         @include easeOut;
       }
     }
@@ -74,50 +75,10 @@ main {
   }
 }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
-
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: $secondary-color solid 3px;
-  }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-
-    p {
-      font-weight: 200;
-      font-style: italic;
-    }
-  }
-
-  .job1 {
-    grid-area: job1;
-  }
-
-  .job2 {
-    grid-area: job2;
-  }
-
-  .job3 {
-    grid-area: job3;
-  }
-
-  .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color solid 5px;
-  }
+// About
+.col-about {
+  margin-top: 200px;
 }
-
 // Work/Projects
 .projects {
   display: grid;
@@ -132,6 +93,9 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
