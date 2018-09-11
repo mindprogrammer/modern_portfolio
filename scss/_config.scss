@@ -2,7 +2,7 @@ $primary-color: rgb(29, 15, 25);
 $secondary-color: red;
 $show-home-image: true;
 $home-image: url(http://source.unsplash.com/random?technology);
-$background-opacity: 0.8;
+$background-opacity: 0.9;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
